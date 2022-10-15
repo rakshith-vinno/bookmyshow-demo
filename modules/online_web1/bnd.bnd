@@ -1,0 +1,4 @@
+Bundle-Name: online_web1
+Bundle-SymbolicName: com_mct
+Bundle-Version: 1.0.0
+Export-Package: com_mct.constants

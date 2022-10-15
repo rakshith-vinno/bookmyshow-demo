@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.bookings.model.City">
+		<field name="uuid" type="String" />
+		<field name="city_id" type="long" />
+		<field name="city_Name" type="String" />
+	</model>
+	<model name="com.bookings.model.Movies">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="name" type="String" />
+		<field name="rating" type="Double" />
+		<field name="release_date" type="Date" />
+		<field name="length_min" type="int" />
+	</model>
+	<model name="com.bookings.model.Movies_City">
+		<field name="movie_id" type="long" />
+		<field name="city_id" type="long" />
+	</model>
+</model-hints>

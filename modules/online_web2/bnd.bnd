@@ -1,0 +1,4 @@
+Bundle-Name: online_web2
+Bundle-SymbolicName: com.life_cont
+Bundle-Version: 1.0.0
+Export-Package: com.life_cont.constants

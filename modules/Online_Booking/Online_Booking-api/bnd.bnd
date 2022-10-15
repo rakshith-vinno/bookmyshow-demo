@@ -1,0 +1,10 @@
+Bundle-Name: Online_Booking-api
+Bundle-SymbolicName: com.bookings.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.bookings.exception,\
+	com.bookings.model,\
+	com.bookings.service,\
+	com.bookings.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../Online_Booking-service/service.xml

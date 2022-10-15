@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.bookings.service.impl.CityLocalServiceImpl" id="com.bookings.service.CityLocalService" />
+	<bean class="com.bookings.service.impl.CityServiceImpl" id="com.bookings.service.CityService" />
+	<bean class="com.bookings.service.persistence.impl.CityPersistenceImpl" id="com.bookings.service.persistence.CityPersistence" parent="basePersistence" />
+	<bean class="com.bookings.service.impl.MoviesLocalServiceImpl" id="com.bookings.service.MoviesLocalService" />
+	<bean class="com.bookings.service.impl.MoviesServiceImpl" id="com.bookings.service.MoviesService" />
+	<bean class="com.bookings.service.persistence.impl.MoviesPersistenceImpl" id="com.bookings.service.persistence.MoviesPersistence" parent="basePersistence" />
+	<bean class="com.bookings.service.impl.Movies_CityLocalServiceImpl" id="com.bookings.service.Movies_CityLocalService" />
+	<bean class="com.bookings.service.impl.Movies_CityServiceImpl" id="com.bookings.service.Movies_CityService" />
+	<bean class="com.bookings.service.persistence.impl.Movies_CityPersistenceImpl" id="com.bookings.service.persistence.Movies_CityPersistence" parent="basePersistence" />
+</beans>
