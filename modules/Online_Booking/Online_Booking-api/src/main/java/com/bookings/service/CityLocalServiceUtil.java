@@ -203,6 +203,10 @@ public class CityLocalServiceUtil {
 		return getService().getActionableDynamicQuery();
 	}
 
+	public static List<Object[]> getAllTable(String cityname) {
+		return getService().getAllTable(cityname);
+	}
+
 	/**
 	 * Returns a range of all the cities.
 	 *

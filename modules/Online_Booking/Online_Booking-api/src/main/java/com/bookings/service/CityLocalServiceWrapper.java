@@ -211,6 +211,11 @@ public class CityLocalServiceWrapper
 		return _cityLocalService.getActionableDynamicQuery();
 	}
 
+	@Override
+	public java.util.List<Object[]> getAllTable(String cityname) {
+		return _cityLocalService.getAllTable(cityname);
+	}
+
 	/**
 	 * Returns a range of all the cities.
 	 *

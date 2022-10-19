@@ -11,7 +11,7 @@
 <aui:form name="fm" action="${saveMovie}">
 
 	
-	<aui:input type="text" name="name" label="Movie_Name"> </aui:input>
+	<aui:input type="text" name="name" label="Movie Name"> </aui:input>
 	<aui:input type="double" name="rating" label="Rating"> </aui:input>
 	<aui:input type="date" name="release_date" label="Release _Date"> </aui:input>
 	<aui:input type="text" name="length_min" label="Time"> </aui:input>

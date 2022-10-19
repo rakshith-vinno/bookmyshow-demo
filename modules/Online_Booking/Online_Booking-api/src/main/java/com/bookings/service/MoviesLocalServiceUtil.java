@@ -283,6 +283,10 @@ public class MoviesLocalServiceUtil {
 		return getService().getMovieThird(name);
 	}
 
+	public static List<Object[]> getOnlyMovieObject() {
+		return getService().getOnlyMovieObject();
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *

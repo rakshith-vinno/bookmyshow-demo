@@ -92,19 +92,7 @@ public class MoviesLocalServiceImpl extends MoviesLocalServiceBaseImpl
 	}
 	
 	
-	public List<Object[]>  getMovieID(String name)
-	{
-		Session session=moviesPersistence.openSession();
-		 SQLQuery query=session.createSQLQuery(
-				 "select  m.id_ "
-		 		+ " from Movies m "
-		 		+ " where m.name=?");
-		 
-		 QueryPos pos=QueryPos.getInstance(query);
-		 pos.add(name);
-		 
-		 return query.list();
-	}
+	
 	
 	public List<Movies[]>  getMovieThird(String name)
 	{
@@ -156,6 +144,27 @@ public class MoviesLocalServiceImpl extends MoviesLocalServiceBaseImpl
 
 	@Override
 	public List<Object[]> getMoviEIdlist1(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	
+	public List<Object[]>  getOnlyMovieObject()
+	{
+		Session session=moviesPersistence.openSession();
+		 SQLQuery query=session.createSQLQuery(
+				 "select * "
+		 		+ " from Movies s");
+		 
+		 QueryPos pos=QueryPos.getInstance(query);
+		 
+		 return  query.list();
+	}
+
+	@Override
+	public List<Object[]> getMovieID(String name) {
 		// TODO Auto-generated method stub
 		return null;
 	}

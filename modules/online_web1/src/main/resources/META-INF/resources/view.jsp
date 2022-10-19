@@ -12,7 +12,7 @@
 	<portlet:param name="mvcRenderCommandName" value="/create/movieEdit" />
 </portlet:renderURL>
 <a href="${createMovieEditRenderClass}" >
-<input type="submit" value="Add Movie "></input>
+<input type="submit" value="ADD MOVIE "></input>
 </a>
 &nbsp&nbsp&nbsp&nbsp
 
@@ -24,7 +24,7 @@
 	<portlet:param name="mvcRenderCommandName" value="/create/cityEdit" />
 </portlet:renderURL>
 <a href="${createCityEditRenderClass}" >
-<input type="submit" value="Add City " color="green"></input>
+<input type="submit" value="ADD CITY " color="green"></input>
 </a>&nbsp&nbsp&nbsp&nbsp
 
 
@@ -49,7 +49,7 @@
 
 </portlet:renderURL>
 <a href="${createMovieFetchRenderClass}" >
-<input type="submit" value="Movie List"></input>
+
 </a>
 
 <br><br>
@@ -58,9 +58,18 @@
 
 <portlet:renderURL var="searchURL">
     <portlet:param name="mvcRenderCommandName" 
-    value="/guestbook/view_search.jsp" />
+    value="/online_web1/src/main/resources/META-INF/resources/movieFetch.jsp" />
 </portlet:renderURL>
 
+
+
+
+
+
+
+<portlet:actionURL name="citysearchName" var="citysearchURL" >
+
+</portlet:actionURL>
 
 <style>
     options {
@@ -70,33 +79,29 @@
    
 </style>
 
-
-
-
 <h1>WELCOME</h1>
 
-<aui:form action="${searchURL}" name="fm">
+<aui:form action="${citysearchURL}" name="fm">
     <aui:fieldset>
-        <aui:select label="Select Cities:" id="options" name="selectField1" required="true" showEmptyOption="true">
+        <aui:select label="Select Your City" id="option" name="cityTable"  showEmptyOption="true">
         
         <%try{%>
-        <%long id=ParamUtil.get(request, "id", 0); %>
         <% List <Object[]> data = CityLocalServiceUtil.getCityObject();%>
         <% for (Object[] objects : data) { %>
 	    <%String cityname = (String) objects[2];%>
 	    
 	
-        <aui:option value="Option 1"><%=cityname%></aui:option>
+       
+	 <aui:option  label="<%=cityname%>" value="<%=cityname%>" selected="true"></aui:option>
 	
 <% }%>
 	
 <% }catch(Exception e){e.getMessage();}%>
             
         </aui:select>
-         <aui:button type="submit" value="search" />
+         <aui:button type="submit" value="Search" />
     </aui:fieldset>
 </aui:form>
-
 
 
 

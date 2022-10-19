@@ -255,6 +255,9 @@ public interface MoviesLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public List<Movies[]> getMovieThird(String name);
 
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<Object[]> getOnlyMovieObject();
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *

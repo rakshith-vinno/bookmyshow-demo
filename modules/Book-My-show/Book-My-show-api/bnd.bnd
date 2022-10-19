@@ -1,0 +1,10 @@
+Bundle-Name: Book-My-show-api
+Bundle-SymbolicName: com.database.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.database.exception,\
+	com.database.model,\
+	com.database.service,\
+	com.database.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../Book-My-show-service/service.xml

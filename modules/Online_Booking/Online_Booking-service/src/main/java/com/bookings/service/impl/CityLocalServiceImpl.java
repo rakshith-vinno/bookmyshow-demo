@@ -29,6 +29,29 @@ import java.util.List;
  */
 public class CityLocalServiceImpl extends CityLocalServiceBaseImpl
 {
+	public List<Object[]>  getAllTable(String  cityname)
+	{
+		Session session=cityPersistence.openSession();
+		 SQLQuery query=session.createSQLQuery(
+				 "select  m.name, m.rating, m.release_date, m.length_min "
+		 		+ " from Movies m join Movies_City mc on "
+		 		+ " m.id_=mc.movie_id join City c on mc.city_id=c.city_id"
+		 		+ " where c.city_Name=?");
+		 
+		 QueryPos pos=QueryPos.getInstance(query);
+		 pos.add(cityname);
+		 
+		 return query.list();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public City addCity(long city_id,String city_Name)
 	{
 		City c=new CityImpl();
@@ -42,6 +65,9 @@ public class CityLocalServiceImpl extends CityLocalServiceBaseImpl
 		
 		return c;
 	}
+	
+	
+	
 	
 	public List<City[]>  getCityThird(String cityname)
 	{

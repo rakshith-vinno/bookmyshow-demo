@@ -194,6 +194,9 @@ public interface CityLocalService
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public ActionableDynamicQuery getActionableDynamicQuery();
 
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public List<Object[]> getAllTable(String cityname);
+
 	/**
 	 * Returns a range of all the cities.
 	 *

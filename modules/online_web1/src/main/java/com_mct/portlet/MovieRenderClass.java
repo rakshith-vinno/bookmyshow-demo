@@ -20,6 +20,8 @@ public class MovieRenderClass implements MVCRenderCommand
 	@Override
 	public String render(RenderRequest renderRequest, RenderResponse renderResponse) throws PortletException {
 		
+		
+		
 		return "/movieEdit.jsp";
 	}
 

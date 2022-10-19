@@ -39,19 +39,20 @@ public class M_CActionClass extends BaseMVCActionCommand
 	protected void doProcessAction(ActionRequest actionRequest, ActionResponse actionResponse) throws Exception 
 	{
 		
+		ParamUtil.print(actionRequest);
+		String movie=actionRequest.getParameter("movie");
+		String city = actionRequest.getParameter("city");
+		System.out.println(movie+"^^^^^^^^^^^^^^^^^^^^"+city);
 		
-		
-		
-		String movie_name=ParamUtil.get(actionRequest, "movieName", "");
-		String city_name=ParamUtil.get(actionRequest, "cityName", "");
-		System.out.println("Id    :"+movie_name+"  ctyId   :"+city_name);
+
+	    
+	    
 		
 		try {
-		List<Movies[]> data=MoviesLocalServiceUtil.getMovieThird(movie_name);
+		List<Movies[]> data=MoviesLocalServiceUtil.getMovieThird(movie);
 		
-		List<City[]> cit=CityLocalServiceUtil.getCityThird(city_name);
-		System.out.println(data);
-	  
+		List<City[]> cit=CityLocalServiceUtil.getCityThird(city);
+		
 			for (Object[] objects : data)
 			{
 				BigInteger l1 = (BigInteger) objects[0];
@@ -79,8 +80,28 @@ public class M_CActionClass extends BaseMVCActionCommand
 
 		} catch (Exception e) 
 		{e.printStackTrace();}
+	
 		
 		
+		
+		
+		
+		
+		
+		
+		
+//	    try{
+//   List<Object[]> data=MoviesLocalServiceUtil.getOnlyMovieObject();
+//        for (Object[] objects : data) { 
+//        BigInteger movieId = (BigInteger) objects[1];
+//	    String moviename = (String) objects[2];
+//	    System.out.println(movieId+"  "+moviename);
+//        }}
+//	    catch (Exception e) {
+//			// TODO: handle exception
+//		}
+		
+		ParamUtil.print(actionRequest);
 		
 	}
 	

@@ -318,6 +318,11 @@ public class MoviesLocalServiceWrapper
 		return _moviesLocalService.getMovieThird(name);
 	}
 
+	@Override
+	public java.util.List<Object[]> getOnlyMovieObject() {
+		return _moviesLocalService.getOnlyMovieObject();
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *
